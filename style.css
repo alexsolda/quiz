@@ -1,0 +1,100 @@
+@keyframes miss-answer {
+    0% {
+        box-shadow: 1px 1px 90px 10px tomato;
+    }
+    25% {
+        box-shadow: 1px 1px 90px 6px tomato;
+    }
+    75% {
+        box-shadow: 1px 1px 90px 3px tomato;
+    }
+    100% {
+        box-shadow: 1px 1px 90px 0px tomato;
+    }
+}
+
+* {
+    outline: none;
+    font-family: "Love Ya Like A Sister", cursive;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(to top, #00b3ff, #00c5ff, #00d5ff, #11e4f9, #53f2f2);
+}
+main {
+    height: 100%;
+}
+.btn-play {
+    font-family: "Nerko One", cursive;
+    background-image: radial-gradient(circle, #4af267, #3dd956, #30c146, #21a936, #0f9226);
+    height: 200px;
+    width: 200px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 3.5rem;
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.603);
+    outline: none;
+}
+.btn-play:hover {
+    height: 220px;
+    width: 220px;
+    font-size: 4rem;
+    box-shadow: 20px 20px 80px #4af267;
+}
+.btn-play:hover::after {
+    display: inline;
+}
+.btn-play::after {
+    content: "!";
+    display: none;
+    color: #e1ba7c;
+}
+.btn-play:active {
+    box-shadow: 20px 20px 80px rgba(0, 0, 0, 0.151);
+    height: 200px;
+    width: 200px;
+}
+.btn-play:focus {
+    outline: none;
+}
+.active {
+    background-image: linear-gradient(to right, #e1ba7c, #e5b870, #eab664, #eeb458, #f2b24b);
+    color: white;
+}
+.btn-light {
+    background-color: #e1ba7c;
+}
+.miss-answer {
+    border: 2px solid rgba(255, 99, 71, 0.637);
+    box-shadow: 1px 1px 90px 10px tomato;
+    animation: miss-answer infinite 0.5s ease-in-out;
+}
+.modal-content {
+    box-shadow: 20px 20px 80px rgba(0, 255, 234, 0.651);
+    border: 3px solid #00c5ff;
+}
+.modal-header {
+    background-image: linear-gradient(to top, #00b3ff, #00c5ff, #00d5ff, #11e4f9, #53f2f2);
+}
+.titulo-pergunta {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+.total-resultado {
+    color: green;
+    font-size: 3.5rem;
+    text-align: center;
+}
+.modal-body {
+    transition: linear 0.5s;
+}
+#op1, #op2 {
+    font-size: 1.7  rem;
+}
+.img-result {
+    width: 200px;
+    height: 200px;
+}
